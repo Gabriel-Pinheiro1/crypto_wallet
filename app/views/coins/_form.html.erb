@@ -26,6 +26,10 @@
     <%= form.text_field :image %>
   </div>
 
+  <div class = "field">
+     <%= form.select("mining_type_id", MiningType.all.collect { |m| [m.description, m.id] }, {include_blank: "selecione"}) %> 
+  </div>
+
   <div>
     <%= form.submit %>
   </div>

@@ -14,8 +14,8 @@ class MiningTypesTest < ApplicationSystemTestCase
     visit mining_types_url
     click_on "New mining type"
 
-    fill_in "Acronym", with: @mining_type.acronym
-    fill_in "Name", with: @mining_type.name
+    fill_in "Acronyn", with: @mining_type.acronyn
+    fill_in "Description", with: @mining_type.description
     click_on "Create Mining type"
 
     assert_text "Mining type was successfully created"
@@ -26,8 +26,8 @@ class MiningTypesTest < ApplicationSystemTestCase
     visit mining_type_url(@mining_type)
     click_on "Edit this mining type", match: :first
 
-    fill_in "Acronym", with: @mining_type.acronym
-    fill_in "Name", with: @mining_type.name
+    fill_in "Acronyn", with: @mining_type.acronyn
+    fill_in "Description", with: @mining_type.description
     click_on "Update Mining type"
 
     assert_text "Mining type was successfully updated"
