@@ -31,3 +31,8 @@
 
 en:
   hello: "Hello world"
+  actual_locale: English
+  links:
+    show: "Show"
+    edit: "Edaaaaat"
+    destroy: "Delete"
