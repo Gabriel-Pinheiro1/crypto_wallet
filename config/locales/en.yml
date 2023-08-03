@@ -31,8 +31,11 @@
 
 en:
   hello: "Hello world"
-  actual_locale: English
+  current_locale: English
+  messages:
+    welcome: "This is your digital wallet to register Cryptocurrencies in a practical and easy way"
+    menu: "How can we help?"
   links:
     show: "Show"
-    edit: "Edaaaaat"
+    edit: "Edit"
     destroy: "Delete"

@@ -3,12 +3,28 @@
 <h1>Coins</h1>
 
 <div id="coins">
-  <% @coins.each do |coin| %>
-    <%= render coin %>
-    <p>
-      <%= link_to "Show this coin", coin %>
-    </p>
-  <% end %>
+<table class = "table table-dark table-striped">
+<thead>
+<tr class = "">
+    <td><%= t("activerecord.attributes.coin.description") %></td>
+    <td><%= t("activerecord.attributes.coin.acronym") %></td>
+    <td><%= t("activerecord.attributes.coin.image") %></td>
+    <td><%= %></td>
+  </tr>
+</thead>
+  <tbody>
+    <% @coins.each do |coin| %>
+      <tr>
+        <td><%= coin.description %></td>
+        <td><%= coin.acronym %></td>
+        <td><%= coin.image %></td>
+        <td><%= link_to t("links.show"), coin %></td>
+        <td><%= link_to t("links.edit"), coin_edit_path %></td>
+        <td><%= link_to t("links.destroy"), coin %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 </div>
 
-<%= link_to "New coin", new_coin_path %>
+<%= link_to t("links.new"), new_coin_path, class: "btn btn-primary" %>

@@ -1,14 +1,12 @@
-<h1>Seja bem vindo!</h1>
-<p> Data <%=data_br(Date.today)%> </p>
-<p>
-    <%= link_to 'Portuguese', root_path(locale:'pt-BR') %>
-</p>
-<p>
-    <%= link_to 'English', root_path(locale:'en') %>
-</p>
-<%= cookies[:user_name]%>
-<p> O seu idioma padrão é <%= t('actual_locale')%> </p>
-<%= link_to "Acesse sua Crypto Wallet", coins_path %> 
-<%=link_to "Tipos de mineração", mining_types_path%>
-<p> Você está em ambiete de <b> <%= ambiente_rails %> </b> </p>
-<%= render "footer" %>
+
+
+<div class=" bg-dark  text-light p-5 rounded-lg m-3">
+  <h1 class="display-4">Crypto Wallet</h1>
+  <p class="lead"><%= t("messages.welcome") %></p>
+  <hr class="my-4">
+  <p><%= t("messages.menu") %></p>
+  <%= link_to "#{Coin.model_name.human}", coins_path, class: "btn btn-primary btn-lg " %>  
+  <%= link_to "#{MiningType.model_name.human}", mining_types_path, class: "btn btn-primary btn-lg" %>  
+  
+  
+</div>

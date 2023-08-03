@@ -1,7 +1,11 @@
 pt-BR:
   hello: "olá mundo" 
-  actual_locale: Portugues-Brasil
+  current_locale: Portugues-Brasil
+  messages:
+    welcome: "Esta é a sua carteira digital para cadastrar cripto moedas de forma pŕatica e fácil"
+    menu: "como podemos ajudar?"
   links:
+    new: "Novo"
     show: "Mostrar"
     edit: "Editar"
     destroy: "Deletar"
