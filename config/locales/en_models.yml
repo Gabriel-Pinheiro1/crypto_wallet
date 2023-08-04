@@ -14,6 +14,7 @@ en:
         created_at: Created at
       mining_type:
         id: Id
+        description: description
         acronym: Acronym
         updated_at: Last update
         created_at: Created at

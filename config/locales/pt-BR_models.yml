@@ -1,8 +1,8 @@
 pt-BR:
   activerecord:
     models:
-      coin: moedas
-      mining_type: tipo de mineração
+      coin: Moeda
+      mining_type: Tipo de mineração
     attributes:
       coin:
         id: Código
@@ -14,6 +14,7 @@ pt-BR:
         created_at: Criado em
       mining_type:
         id: Código
+        description: Descrição
         acronym: Sigla
         updated_at: Ultima atualização
         created_at: Criado em

@@ -1,22 +1,23 @@
 <div id="<%= dom_id coin %>">
-  <p>
-    <strong><%= Coin.human_attribute_name(:description) %></strong>
-    <%= coin.description %>
-  </p>
-
-  <p>
-    <strong><%= Coin.human_attribute_name(:acronym) %></strong>
-    <%= coin.acronym %>
-  </p>
-
-  <p>
-    <strong> <%=Coin.human_attribute_name(:image)%></strong>
-    <%= coin.image %>
-  </p>
-
-  <p>
-    <strong><%=Coin.human_attribute_name(:mining_type)%></strong>
-    <%= coin.mining_type.description %>
-  </p>
-
+<h1> <%= t('activerecord.models.coin: ') + @coin.description%> </h1>
+  <form>
+  
+  <div class = "form-group">
+      <%= label_tag nil, @coin.class.human_attribute_name(:description) %>
+      <%= text_field_tag nil, coin.description, class: "form-control", disabled: true %>       
+  </div>
+  <div class = "form-group">
+      <%= label_tag nil, @coin.class.human_attribute_name(:acronym) %>
+      <%= text_field_tag nil, coin.acronym, class: "form-control", disabled: true %>       
+  </div>
+  <div class = "form-group">
+      <%= label_tag nil, @coin.class.human_attribute_name(:image) %>
+      <%= text_field_tag nil, coin.image, class: "form-control", disabled: true %>       
+  </div>
+  <div class = "form-group">
+      <%= label_tag nil, @coin.class.human_attribute_name(:mining_type) %>
+      <%= text_field_tag nil, coin.mining_type.description, class: "form-control", disabled: true %>       
+  </div>
+  
+  </form>
 </div>

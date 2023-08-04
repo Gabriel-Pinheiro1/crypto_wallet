@@ -39,3 +39,7 @@ en:
     show: "Show"
     edit: "Edit"
     destroy: "Delete"
+  new:
+    coin: "New Coin"
+    mining_type: "New Mining Type"
+
