@@ -1,12 +1,16 @@
 <div id="<%= dom_id mining_type %>">
-  <p>
-    <strong>Description:</strong>
-    <%= mining_type.description %>
-  </p>
-
-  <p>
-    <strong>Acronyn:</strong>
-    <%= mining_type.acronyn %>
-  </p>
-
+  <h1> <%= t('activerecord.models.mining_type: ') + @mining_type.description%> </h1>
+  <form>
+  
+  <div class = "form-group">
+      <%= label_tag nil, @mining_type.class.human_attribute_name(:description) %>
+      <%= text_field_tag nil, mining_type.description, class: "form-control", disabled: true %>       
+  </div>
+  <div class = "form-group">
+      <%= label_tag nil, @mining_type.class.human_attribute_name(:acronyn) %>
+      <%= text_field_tag nil, mining_type.acronyn, class: "form-control", disabled: true %>       
+  </div>
+  
+  
+  </form>
 </div>
